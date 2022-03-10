@@ -1,0 +1,1 @@
+BTK Yapay Zeka Atölyesi
