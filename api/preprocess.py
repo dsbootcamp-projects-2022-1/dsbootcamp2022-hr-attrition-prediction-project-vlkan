@@ -4,11 +4,11 @@ import pickle
 
 
 # load onehot encoder
-with open("preprocessors/onehot_encoder.pkl", "rb") as f:
+with open("api/preprocessors/onehot_encoder.pkl", "rb") as f:
     onehot_encoder = pickle.load(f)
 
 # load scaler
-with open("preprocessors/standard_sc.pkl", "rb") as f:
+with open("api/preprocessors/standard_sc.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 

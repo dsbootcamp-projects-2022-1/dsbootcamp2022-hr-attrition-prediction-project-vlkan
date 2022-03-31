@@ -1,7 +1,7 @@
 import pickle
 
 # TODO
-model_path = '/api/models/logistic_reg.pkl'
+model_path = "api/models/logistic_reg.pkl"
 
 
 with open(model_path, 'rb') as f:
