@@ -4,11 +4,11 @@ import pickle
 
 
 # load onehot encoder
-with open("api/preprocessors/onehot_encoder.pkl", "rb") as f:
+with open("api/preprocessors/encoder.pkl", "rb") as f:
     onehot_encoder = pickle.load(f)
 
 # load scaler
-with open("api/preprocessors/standard_sc.pkl", "rb") as f:
+with open("api/preprocessors/logistic_reg_SC.pkl", "rb") as f:
     scaler = pickle.load(f)
 
 
@@ -19,8 +19,7 @@ COLUMNS_TO_REMOVE = [
 
 # TODO
 COLUMNS_TO_ONEHOT_ENCODE = [
-    "BusinessTravel", "Department", "EducationField", 
-    "Gender", "JobRole", "MaritalStatus", "OverTime"
+    "BusinessTravel", "Department", "EducationField", "Gender", "JobRole", "MaritalStatus", "OverTime"
 ]
 
 
@@ -60,6 +59,11 @@ def create_features(df: pd.DataFrame) -> pd.DataFrame:
     df["NumCompaniesJobLevel"] = df["JobLevel"] / (df["NumCompaniesWorked"] + 1)
     df["DailyRateStockOption"] = df["DailyRate"] / (df["StockOptionLevel"] + 1)
     df["MonthlyRateStockOption"] = df["MonthlyRate"] / (df["StockOptionLevel"] + 1)
+
+    bins = pd.IntervalIndex.from_tuples([(-1, 5), (5, 10), (10, 15), (15,100)])
+    cat_YearsAtCompany = pd.cut(df["YearsAtCompany"].to_list(), bins)
+    cat_YearsAtCompany.categories = [0,1,2,3]
+    df["YearsAtCompanyCat"] = cat_YearsAtCompany
 
     # TODO
 

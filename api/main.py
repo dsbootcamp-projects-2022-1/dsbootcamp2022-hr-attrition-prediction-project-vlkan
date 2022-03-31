@@ -40,15 +40,15 @@ def model_card() -> str:
     # TODO
 
     model_card = {
-        'model_name': '',
+        'model_name': 'logisticReg',
         'model_description': '',
-        'model_version': '',
-        'model_author': '',
-        'model_author_mail': '',
-        'model_creation_date': '',
-        'model_last_update_date': '',
+        'model_version': '1',
+        'model_author': 'Volkan Önder',
+        'model_author_mail': 'thkvolkanonder@gmail.com',
+        'model_creation_date': '31.03.2022',
+        'model_last_update_date': '31.03.2022',
         'required_parameters_list': '',
-        'required_parameters_descriptions': '',
+        'required_parameters_descriptions': 'Logistic Regresion, liblinear',
     }
 
     return model_card
