@@ -19,9 +19,9 @@ def read_items(sample: Sample) -> int:
 @app.get("/whoami")
 def whoami() -> str:
     # TODO
-    isim = "Volkan"
-    soyisim = "Önder"
-    mail = "thkvolkanonder@gmail.com"
+    isim = "JOHN"
+    soyisim = "DOE"
+    mail = "mail@mail.com"
     
     person_card = {
         "isim": isim,

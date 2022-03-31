@@ -19,8 +19,7 @@ COLUMNS_TO_REMOVE = [
 
 # TODO
 COLUMNS_TO_ONEHOT_ENCODE = [
-    "BusinessTravel", "Department", "EducationField", 
-    "Gender", "JobRole", "MaritalStatus", "OverTime"
+
 ]
 
 
