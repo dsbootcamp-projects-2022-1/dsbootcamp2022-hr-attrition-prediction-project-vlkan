@@ -42,13 +42,13 @@ def model_card() -> str:
     model_card = {
         'model_name': 'logisticReg',
         'model_description': '',
-        'model_version': '1',
+        'model_version': '1.1',
         'model_author': 'Volkan Önder',
         'model_author_mail': 'thkvolkanonder@gmail.com',
         'model_creation_date': '31.03.2022',
-        'model_last_update_date': '31.03.2022',
+        'model_last_update_date': '03.04.2022',
         'required_parameters_list': '',
-        'required_parameters_descriptions': 'Logistic Regresion, liblinear',
+        'required_parameters_descriptions': 'Logistic Regresion, solver=liblinear, max_iter=1000, C=0.1',
     }
 
     return model_card
